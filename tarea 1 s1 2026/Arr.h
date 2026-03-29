@@ -20,7 +20,7 @@ public:
     void append(int v){
         if(n==cap){
             int* B= new int[cap*2];
-            for(int i=0; i<n; i++){
+            for(unsigned long i=0; i<n; i++){
                 B[i]=A[i];
             }
             delete[] A;
@@ -37,7 +37,7 @@ public:
         n--;
         if(n==cap/2 && cap>1){
             int* B= new int[cap/2];
-            for(int i=0; i<n; i++){
+            for(unsigned long i=0; i<n; i++){
                 B[i]=A[i];
             }
             delete[] A;
