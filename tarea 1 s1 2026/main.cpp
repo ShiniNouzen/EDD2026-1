@@ -19,31 +19,31 @@ int main(){
         cout<<"para agregar un nuevo valor al final del arreglo, ingrese 3 \n";
         cout<<"para remover la última componente del arreglo, ingrese 4 \n";
         cout<<"para saber la cantidad total de componentes en su arreglo, ingrese 5 \n";
-        cout<<"para finalizar el programa, ingrese 0 \n";
+        cout<<"para finalizar el programa, ingrese 0 \n"<<endl;
         cin>>opt;//se le asigna un valor a opt
         if(opt==1){
-            cout<<"ingrese la posicion en el formato (n-1) en que quiere añadir su elemento \n";
+            cout<<"ingrese la posicion en el formato (n-1) en que quiere añadir su elemento \n"<<endl;
             cin>>pos;
-            cout<<"ingrese el valor a agregar \n";
+            cout<<"ingrese el valor a agregar \n"<<endl;
             cin>>v1;
             myfile.arreglo.setvalue(pos, v1);
         }
         else if(opt==2){
-            cout<<"ingrese la posicion en el formato (n-1) del elemento que desea consultar \n";
+            cout<<"ingrese la posicion en el formato (n-1) del elemento que desea consultar \n"<<endl;
             cin>>pos;
-            cout<<"el valor en la pos "<<pos<<" es: "<<myfile.arreglo.getvalue(pos)<<endl;
+            cout<<"el valor en la pos "<<pos<<" es: "<<myfile.arreglo.getvalue(pos)<<endl<<endl;
         }
         else if(opt==3){
-            cout<<"ingrese el valor a agregar al final del arreglo \n";
+            cout<<"ingrese el valor a agregar al final del arreglo \n"<<endl;
             cin>>v1;
             myfile.arreglo.append(v1);
         }
         else if(opt==4){
             myfile.arreglo.remove();
-            cout<<"el elemento ha sido removido exitosamente \n";
+            cout<<"el elemento ha sido removido exitosamente \n"<<endl;
         }
         else if(opt==5){
-            cout<<"el número de elementos en el arreglo es: "<<myfile.arreglo.size()<<endl;
+            cout<<"el número de elementos en el arreglo es: "<<myfile.arreglo.size()<<endl<<endl;
         }
         else if(opt==0){
             break;
