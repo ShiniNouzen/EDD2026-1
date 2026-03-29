@@ -1,0 +1,53 @@
+#include <iostream>
+#include "Arr.h"
+#include "leer_arc.h"
+using namespace std;
+arch myfile; //chiste tonto, linux es el nombre del objeto para la clase que lee archivos
+int main(){
+    string nombre;
+    cout<<"porfavor ingrese el nombre de su archivo sin el prefijo '.txt'\n";
+    cin>>nombre;
+    nombre+=".txt";
+    myfile.lectura(nombre); //se lee y añaden las componentes del archivo llamando a la funcion lectura
+    while(true){ //ciclo de interfaz de usuario
+        int opt; //variable para asignar opcion en consola
+        unsigned long pos; //variable para poner posicion en consola
+        int v1; //variable para añadir valores al arreglo en consola
+        cout<<"bienvenido a la interfaz de usuario de tu arreglo extensible \n"; 
+        cout<<"para asignar un valor entero a una posicion específica dentro del rango, ingrese 1 \n";
+        cout<<"para obtener el valor entero de una posicion específica en el rango, ingrese 2 \n";
+        cout<<"para agregar un nuevo valor al final del arreglo, ingrese 3 \n";
+        cout<<"para remover la última componente del arreglo, ingrese 4 \n";
+        cout<<"para saber la cantidad total de componentes en su arreglo, ingrese 5 \n";
+        cout<<"para finalizar el programa, ingrese 0 \n";
+        cin>>opt;//se le asigna un valor a opt
+        if(opt==1){
+            cout<<"ingrese la posicion en el formato (n-1) en que quiere añadir su elemento \n";
+            cin>>pos;
+            cout<<"ingrese el valor a agregar \n";
+            cin>>v1;
+            myfile.arreglo.setvalue(pos, v1);
+        }
+        else if(opt==2){
+            cout<<"ingrese la posicion en el formato (n-1) del elemento que desea consultar \n";
+            cin>>pos;
+            cout<<"el valor en la pos "<<pos<<" es: "<<myfile.arreglo.getvalue(pos)<<endl;
+        }
+        else if(opt==3){
+            cout<<"ingrese el valor a agregar al final del arreglo \n";
+            cin>>v1;
+            myfile.arreglo.append(v1);
+        }
+        else if(opt==4){
+            myfile.arreglo.remove();
+            cout<<"el elemento ha sido removido exitosamente \n";
+        }
+        else if(opt==5){
+            cout<<"el número de elementos en el arreglo es: "<<myfile.arreglo.size()<<endl;
+        }
+        else if(opt==0){
+            break;
+        }
+    }
+};
+
