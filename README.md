@@ -1,5 +1,5 @@
-**Integrantes:** Martin Guzmán y Alex [apellido]
-**SO:** Ubuntu
+**Integrantes:** Martin Guzmán y Axel Garrido
+**SO:** Ubuntu y Arch Linux respectivamente (g++ 15.1.1 en el caso de Arch)
 **Versión de C++:** 17
 **Versión del compilador:** 15.2.0
 
