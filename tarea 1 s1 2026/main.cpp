@@ -2,7 +2,7 @@
 #include "Arr.h"
 #include "leer_arc.h"
 using namespace std;
-arch myfile; //chiste tonto, linux es el nombre del objeto para la clase que lee archivos
+arch myfile; //chiste tonto, intenté ponerle Linux por Arch pero la consola daba error al ser palabra reservada.
 int main(){
     string nombre;
     cout<<"porfavor ingrese el nombre de su archivo sin el prefijo '.txt'\n";
@@ -21,31 +21,31 @@ int main(){
         cout<<"para saber la cantidad total de componentes en su arreglo, ingrese 5 \n";
         cout<<"para finalizar el programa, ingrese 0 \n"<<endl;
         cin>>opt;//se le asigna un valor a opt
-        if(opt==1){
+        if(opt==1){ //funcion para cambiar un valor por uno nuevo
             cout<<"ingrese la posicion en el formato (n-1) en que quiere añadir su elemento \n"<<endl;
             cin>>pos;
             cout<<"ingrese el valor a agregar \n"<<endl;
             cin>>v1;
             myfile.arreglo.setvalue(pos, v1);
         }
-        else if(opt==2){
+        else if(opt==2){ //funcion para consultar valor
             cout<<"ingrese la posicion en el formato (n-1) del elemento que desea consultar \n"<<endl;
             cin>>pos;
             cout<<"el valor en la pos "<<pos<<" es: "<<myfile.arreglo.getvalue(pos)<<endl<<endl;
         }
-        else if(opt==3){
+        else if(opt==3){ //funcion append
             cout<<"ingrese el valor a agregar al final del arreglo \n"<<endl;
             cin>>v1;
             myfile.arreglo.append(v1);
         }
-        else if(opt==4){
+        else if(opt==4){ //funcion remove
             myfile.arreglo.remove();
             cout<<"el elemento ha sido removido exitosamente \n"<<endl;
         }
-        else if(opt==5){
+        else if(opt==5){ //funcion size
             cout<<"el número de elementos en el arreglo es: "<<myfile.arreglo.size()<<endl<<endl;
         }
-        else if(opt==0){
+        else if(opt==0){ //funcion para terminar ejecucion
             break;
         }
     }
