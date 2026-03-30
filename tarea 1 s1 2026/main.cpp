@@ -1,6 +1,6 @@
 #include <iostream>
-#include "Arr.h"
-#include "leer_arc.h"
+#include "Arr.h"//archivo que incluye mi TDA arreglo
+#include "leer_arc.h"//archivo que incluye TDA de lectura de archivo
 using namespace std;
 arch myfile; //chiste tonto, intenté ponerle Linux por Arch pero la consola daba error al ser palabra reservada.
 int main(){
