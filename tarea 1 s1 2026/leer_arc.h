@@ -18,6 +18,7 @@ class arch{
         while(file >> valor && valor!=-1){
             arreglo.append(valor);
         }
+        file.close();
         return;
     }
 };
