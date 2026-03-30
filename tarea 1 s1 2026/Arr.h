@@ -46,7 +46,7 @@ public:
         }
     }
     bool setvalue(unsigned long i, int v){
-        if(i>=0 && i<n){
+        if(i<n){
             A[i]=v;
             return true;
         }
@@ -55,7 +55,7 @@ public:
         }
     }
     int getvalue(unsigned long i){
-        if(i>=0 && i<n){
+        if(i<n){
             return A[i];
     }
         else{
