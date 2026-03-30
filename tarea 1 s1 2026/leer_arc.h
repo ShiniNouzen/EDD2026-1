@@ -11,7 +11,7 @@ class arch{
     void lectura(string nom_arch){
         ifstream file(nom_arch);
         if(!file.is_open()){
-            cout<<"no se pudo abrir el archivo "<<nom_arch<<endl;
+            cerr<<"no se pudo abrir el archivo "<<nom_arch<<endl;
             exit(1);
         }
         int valor;
