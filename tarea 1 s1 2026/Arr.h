@@ -59,7 +59,7 @@ public:
             return A[i];
     }
         else{
-            cout<<"Error de acceso al arreglo \n";
+            cerr<<"Error de acceso al arreglo \n";
             exit(1);
         }
     }
