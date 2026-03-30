@@ -3,7 +3,7 @@
 #include <iostream>
 #include <cstdlib> //necesario para el exit(1)
 using namespace std;
-class Arr {
+class Arr { //clase para manejar arreglos de forma modular
 private:
     int* A;     // bloque de heap arr
     unsigned long n;      // n de elementos
@@ -17,7 +17,7 @@ public:
     ~Arr(){   //destructor
         delete[] A;
     }   
-    void append(int v){
+    void append(int v){//funcion append solicitada
         if(n==cap){
             int* B= new int[cap*2];
             for(unsigned long i=0; i<n; i++){
@@ -29,7 +29,7 @@ public:
         }
         A[n++]=v;
     }
-    void remove(){
+    void remove(){//funcion remove solicitada
         if(n == 0) {
             cout<<"No puedes eliminar valores de un arreglo vacío \n";
             return;
@@ -45,7 +45,7 @@ public:
             cap/=2;
         }
     }
-    bool setvalue(unsigned long i, int v){
+    bool setvalue(unsigned long i, int v){//funcion setvalue solicitada
         if(i<n){
             A[i]=v;
             return true;
@@ -54,7 +54,7 @@ public:
             return false;
         }
     }
-    int getvalue(unsigned long i){
+    int getvalue(unsigned long i){//funcion getvalue solicitada
         if(i<n){
             return A[i];
     }
@@ -63,7 +63,7 @@ public:
             exit(1);
         }
     }
-    unsigned long size(){
+    unsigned long size(){//funcion size solicitada
         return n;
     }
 };   
