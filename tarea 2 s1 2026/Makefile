@@ -1,9 +1,9 @@
-all: tarea2
+all: tarea3
 
-tarea2: main.cpp
-	g++ -Wall -Wextra -std=c++11 -o tarea2 main.cpp
+tarea3: main.cpp
+	g++ -Wall -Wextra -std=c++11 -o tarea3 main.cpp
 run:
-	./tarea2
+	./tarea3
 
 clean:
-	rm -f ./tarea2
+	rm -f ./tarea3
